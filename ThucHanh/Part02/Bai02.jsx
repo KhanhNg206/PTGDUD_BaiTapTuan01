@@ -13,6 +13,7 @@ for (let bill of countMoney) {
    calTip(bill)
    console.log(tips)
    console.log(countValues)
+    console.log(countValues)
 }
 
 // chưa xong
