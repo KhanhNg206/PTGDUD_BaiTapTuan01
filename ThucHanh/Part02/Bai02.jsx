@@ -1,17 +1,24 @@
-const countMoney = [125, 555, 44];
+const bills = [125,555,44];
 const tips = [];
-const countValues = [];
+const totals = [];
 
-const calcTip = (money) => {
-    const tip = (money >= 50 && money <= 300) ? money * 0.15 : money * 0.2;
-    tips.push(tip);
-    countValues.push(money + tip);
-    return tip;
+const calTip = (price) => {
+    let tip;
+    let total;
+    if(price >= 50 && price <= 300){
+        tip = price * 0.15;
+        }else { 
+        tip = price * 0.2;
+    }
+     total = price + tip;
+        totals.push(total)
+    return tip
 };
 
-for (let bill of countMoney) {
-    calcTip(bill);
+for(let price of bills){
+    tips.push(calTip(price));
 }
 
-console.log(tips);
-console.log(countValues);
+console.log(bills)
+console.log(tips)
+console.log(totals)
